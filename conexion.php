@@ -1,21 +1,23 @@
 <?php
-class Conexion{
-    function Conexion{
-        $host ="localhost"
-        $dbname= "prueba"
-        $username="postgres"
-        $password="root"
-try{
-    $conn= new PDO ("pgsql:host=$host; dbname=$dbname; $username, $password");
-    echo "conexion correcta";
-}catch(PDOException $exp){
+class Connection
+{
+  public $host = 'localhost';
+  public $dbname = 'prueba';
+  public $port ="5432";
+  public $user = 'postgres';
+  public $password = 'root';
+  public $driver = 'pgsql';
+  public $connect;
 
-    echo ("error", $exp);
-}
-
-return $conn;
+  public static function getConnection()
+  {
+    try {
+      $connection = new Connection();
+      $connection->connect = new PDO("{$connection->driver}:host={$connection->host};port={$connection->port};dbname={$connection->dbname}", $connection->user, $connection->password);
+      $connection->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      return $connection->connect;
+    } catch (PDOException $e) {
+      echo "Error: " . $e->getMessage();
     }
-
+  }
 }
-
-?>

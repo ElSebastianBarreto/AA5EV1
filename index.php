@@ -7,8 +7,17 @@
 </head>
 <body>
     <?php
-include_once("conexion.php";)
-Conexion::Conexion();
-?>
+    include_once("conexion.php");
+    Connection::getConnection();
+    ?>
+
+    <h1>Bienvenido a la evidencia AA5EV1 </h1>
+    <h2>Registro y login de usuarios </h2>
+    <div>
+        <a href="crear_usuario.php">Crear Usuario</a>
+    </div>
+    <div>
+        <a href="login.php">Login</a>
+    </div>
 </body>
 </html>
