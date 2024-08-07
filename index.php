@@ -14,7 +14,7 @@
     <h1>Bienvenido a la evidencia AA5EV1 </h1>
     <h2>Registro y login de usuarios </h2>
     <div>
-        <a href="crear_usuario.php">Crear Usuario</a>
+        <a href="crearUsario.php">Crear Usuario</a>
     </div>
     <div>
         <a href="login.php">Login</a>
