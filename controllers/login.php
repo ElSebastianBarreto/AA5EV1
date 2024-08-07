@@ -32,7 +32,7 @@ if ($clave === $storedPassword) {
     $_SESSION['usuario'] = $usuario;
 
     // Redirigir a una página luego de exito en login
-    header("Location: exit.php");
+    header("Location: ../inicio.php");
     exit;
 } else {
     // Contraseña incorrecta
