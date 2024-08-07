@@ -13,6 +13,16 @@ if (empty($usuario) || empty($clave)) {
     exit;
 }
 
+// Verificar si el nombre de usuario ya existe
+$query = "select count(*) FROM usuarios WHERE usuario = ?";
+$stmt = $conexion->prepare($query);
+$stmt->execute([$usuario]);
+$usuarioExiste = $stmt->fetchColumn();
+
+if ($usuarioExiste > 0) {
+    echo "El usuario ya esta en uso.";
+    exit;
+}
 
 // Insertar el nuevo usuario en la base de datos
 $query = "INSERT INTO usuarios (usuario, clave) VALUES (?, ?)";
@@ -23,6 +33,5 @@ echo "usuario creado exitosamente.";
 header("Location: exit.php");
 
 // Cerrar la conexión
-$stmt->close();
-$conexion->close();
+exit;
 ?>
