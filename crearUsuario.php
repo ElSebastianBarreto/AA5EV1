@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>Crear Usuario</h1>
-    <form method="post">
+    <form action="controllers/crearUsuario.php" method="post">
         <label for="usuario">Nombre de usuario:</label>
-        <input type="text" id="usuario" name="usuario" required>
+        <input type="text" id="usuario" name="usuario" >
         <br>
         <label for="clave">Contraseña:</label>
-        <input type="password" id="clave" name="clave" required>
+        <input type="password" id="clave" name="clave" >
         <br>
         <input type="submit" value="Crear Usuario">
     </form>
