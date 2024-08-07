@@ -10,7 +10,6 @@
     include_once("conexion.php");
     Connection::getConnection();
     ?>
-
     <h1>Exito de prueba</h1>
    
 </body>

@@ -19,7 +19,7 @@ $query = "INSERT INTO usuarios (usuario, clave) VALUES (?, ?)";
 $stmt = $conexion->prepare($query);
 $stmt->execute([$usuario, $clave]);
 echo "usuario creado exitosamente.";
-
+//envia a exit luego de realizar el registro
 header("Location: exit.php");
 
 // Cerrar la conexión
