@@ -10,7 +10,8 @@
     include_once("../conexion.php");
     Connection::getConnection();
     ?>
-    <h1>Exito de prueba</h1>
+    <h1>Cuenta creada</h1>
+    <a href="../login.php">Inicia sesión</a>
    
 </body>
 </html>
