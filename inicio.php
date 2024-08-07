@@ -3,13 +3,13 @@ session_start();
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario'])) {
-   
-    header("login.php");
+    header("Location: login.php");
     exit;
 }
 
-// Obtener el nombre de usuario de la sesión
-$usuario = $_SESSION['usuario'];
+// Obtener los datos del usuario desde la URL
+$usuario = isset($_GET['usuario']) ? $_GET['usuario'] : '';
+
 ?>
 
 <!DOCTYPE html>
