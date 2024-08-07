@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    include_once("conexion.php");
+    include_once("../conexion.php");
     Connection::getConnection();
     ?>
     <h1>Exito de prueba</h1>
